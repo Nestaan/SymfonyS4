@@ -3,11 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        
+        {% block stylesheets %}
 
-        {% block javascripts %}{% endblock %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        {% endblock %}
+
+
+        {% block javascripts %}
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+        {% endblock %}
     </head>
     <body>
+        <div style="width:100%; height:120px; background-color:white; padding:5px;">
+            <ul>
+                <li><a href="{{ path('app_time_now') }}">Lien vers la date actuelle</a></li>
+                <li><a href="{{ path('app_color', {color:'red'}) }}">Lien vers la couleur Rouge</a></li>
+                <li><a href="{{ path('app_color', {color:'#fdcb6e'}) }}">Lien vers la couleur YD</a></li>
+                <li><a href="{{ path('app_lucky_number') }}">Lien vers le Lucky Number</a></li>
+            </ul>
+        </div>
+
         {% block body %}{% endblock %}
     </body>
 </html>

@@ -1,7 +1,17 @@
-<h1> Couleur : {{color}}</h1>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1> Couleur : <span>{{color}}<span></h1>
+
+{% if color == "red" %}
+<h2><span>Attention, danger de virus</span></h2>
+{% endif %}
+
+{# Un commentaire tout mignon #}
 
 <style type="text/css">
-body{
-    background-color: {{color}};
+span{
+    color: {{color}};
 }
 </style>
+{% endblock %}

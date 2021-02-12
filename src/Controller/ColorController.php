@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ColorController extends AbstractController
 {
     /**
-     * @Route("/color/{color}", name="article_blog", defaults={"color"="blue"})
+     * @Route("/color/{color}", name="app_color", defaults={"color"="blue"})
      */
     public function color($color)
     {
